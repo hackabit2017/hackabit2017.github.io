@@ -1,3 +1,405 @@
-body {
-  background-color: #f9edee;
+body{
+	margin: 0;
+}
+
+.header {
+	width: 100%;
+	height: 750px;
+	background-color: #B0E2F3;
+	position: relative;
+}
+.logo-text {
+	width: 200px;
+	height: 160px;
+	font-size: 40px;
+	background-color: #B0E2F3;
+	font-family: 'Indie Flower', cursive;
+	position: absolute;
+	color: #16323E;
+	top:0;
+	left:200px;
+}
+.mountain {
+	width: 0; 
+  	height: 0; 
+	position: absolute;
+	bottom: 0;
+}	
+
+.big {
+	border-left: 400px solid transparent; 
+  	border-right: 400px solid transparent; 
+  	border-bottom: 700px solid #16323E; 
+	right: 200px;
+}
+
+.small {
+	border-left: 300px solid transparent; 
+  	border-right: 300px solid transparent; 
+  	border-bottom: 500px solid #4D7732; 
+    left: 600px;
+}
+
+.ground {
+	width: 100%;
+	height: 200px;
+	background-color: #009fA7;
+	position: relative;
+}
+
+.first-round-mountain {
+	background: #7BB140;
+ 	height:400px;
+  	width: 600px;
+  	border-top-left-radius: 300px;
+  	border-top-right-radius: 300px;
+  	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.teardrop-tree {
+	width: 260px;
+	height: 260px;
+	border-bottom-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+	border-top-left-radius: 50%;
+	background: #007850;
+	position: absolute;
+	transform:rotate(-45deg);
+  	bottom: 260px;
+	right: 60px;
+}
+
+.oval-tree {
+	background: #00A898;
+ 	height:360px;
+  	width: 160px;
+  	border-radius: 50%;
+  	position: absolute;
+  	bottom: 320px;
+	right: 360px;
+	overflow:hidden;
+
+}
+
+.round-tree {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 240px;
+	right: 660px;
+	overflow:hidden;
+	background:#EDED76;
+}
+
+/*.one,
+.two{
+  width:50%;
+  float:left;
+  background:#EDED76;
+  height:100%;
+}
+
+.two{
+  background:#EDED76;
+}*/
+
+.tree-trunk {
+	width: 30px;
+	border-radius: 10px;
+	background: #7E3C2F;
+	position: absolute;
+}
+
+#teardrop-tree-trunk {
+	height: 200px;
+	bottom: 120px;
+	right: 174px;
+}
+
+#oval-tree-trunk {
+	height: 300px;
+	bottom: 80px;
+	right: 424px;
+}
+
+#round-tree-trunk {
+	height: 200px;
+	bottom: 100px;
+	right: 770px;
+}
+
+.cloud {
+	position: fixed;
+	top: 100px;
+	z-index:999;   
+	left:1500px; 
+}
+
+.cloud-background {
+	background: white;
+}
+
+.first-part{
+	width: 150px;
+   	border-radius: 50px;
+ 	height: 60px;
+	position: relative;
+	z-index: 20;
+   
+}
+
+.second-part{
+	width: 60px;
+	height: 60px;
+   	border-radius: 50%;
+	position: relative;
+ 	bottom: 90px; 
+ 	left: 20px;
+ 	z-index: 20;  
+}
+
+.third-part{
+	width: 40px;
+	height: 40px;
+   	border-radius: 50%;
+	position: relative;
+    bottom: 135px; 
+ 	left: 70px;
+ 	z-index: 20; 
+}
+
+.bush {
+	position: fixed;
+	bottom:0;
+	z-index:999;   
+	left:440px; 
+}
+
+.first-part-bush{
+	background-color: #a1c149;
+	width: 200px;
+   	border-radius: 50px;
+ 	height: 80px;
+	position: relative;
+   
+}
+
+.second-part-bush{
+	background-color: #a1c149;
+	width: 80px;
+	height: 80px;
+   	border-radius: 50%;
+	position: relative;
+ 	bottom: 120px; 
+ 	left: 90px;  
+}
+
+.third-part-bush{
+	background-color: #a1c149;
+	width: 70px;
+	height: 70px;
+   	border-radius: 50%;
+	position: relative;
+    bottom: 180px; 
+ 	left: 40px; 
+}
+
+.second-bush {
+	position: fixed;
+	bottom: 20px;
+	z-index:999;   
+	left:1100px; 
+	bottom:-50px; 
+}
+@keyframes spin {
+  from {
+    transform: rotateZ(-180deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+.rainbow {
+	clip: rect(0 420px 210px 0);
+	height: 420px;
+	position: absolute;
+	top: 460px;
+	width: 420px; 
+ 	right: 1250px;
+}
+.arc {
+	animation: spin ease-in-out 0.5s normal both;
+	border-radius: 50%;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+}
+.arc-red {
+	background: #e31d28;
+	clip: rect(0 420px 210px 0);
+	height: 420px;
+	margin-left: -210px;
+	margin-top: -210px;
+	width: 420px;
+	animation-delay: 0.5s;
+}
+.arc-orange {
+	background: #ed8c3d;
+	clip: rect(0 350px 175px 0);
+	height: 350px;
+	margin-left: -175px;
+	margin-top: -175px;
+	width: 350px;
+	animation-delay: 0.4s;
+}
+.arc-yellow {
+	background: #fcd234;
+	clip: rect(0 280px 140px 0);
+	height: 280px;
+	margin-left: -140px;
+	margin-top: -140px;
+	width: 280px;
+	animation-delay: 0.3s;
+}
+.arc-green {
+	background: #3e9965;
+	clip: rect(0 210px 105px 0);
+	height: 210px;
+	margin-left: -105px;
+	margin-top: -105px;
+	width: 210px;
+	animation-delay: 0.2s;
+}
+.arc-blue {
+	background: #295167;
+	clip: rect(0 140px 70px 0);
+	height: 140px;
+	margin-left: -70px;
+	margin-top: -70px;
+	width: 140px;
+	animation-delay: 0.1s;
+}
+.arc-purple {
+	background: #492245;
+	clip: rect(0 70px 35px 0);
+	height: 70px;
+	margin-left: -35px;
+	margin-top: -35px;
+	width: 70px;
+	animation-delay: 0s;
+}
+#logo-image {
+	width: 400px;
+	height: 160px;
+}
+
+#sm {
+	border-left: 150px solid transparent; 
+  	border-right: 150px solid transparent; 
+  	border-bottom: 300px solid #4D7732; 
+	bottom: 180px; 
+ 	left: -130px; 
+ 	z-index: 999;
+
+
+}
+
+.bgr-color{
+	background-color: #007850;
+}
+
+.aventura-unu{
+	transform:rotate(45deg);
+	font-size: 40px;
+	font-family: 'Indie Flower', cursive;
+	text-align: center;
+	text-indent: 50px;
+	color: yellow;
+}
+
+.aventura-doi{
+	font-size: 40px;
+	font-family: 'Indie Flower', cursive;
+	text-align: center;
+	text-indent: 10px;
+	color: #16323E;
+}
+
+
+.face-container{
+	z-index: 50;
+    position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+svg {
+	max-width: 90%;
+}
+
+
+#mouth-happy,
+#mouth-sad,
+#eyebrow-happy-left,
+#eyebrow-happy-right,
+#eyes-laughing,
+#open-mouth,
+#tongue,
+#mouth-scared {
+	display: none;
+}
+@media (max-width: 699px) {
+	.container {
+		width: 90%;
+	}
+		.bottom {
+		margin-top: 1em;
+			max-width:90%;
+	}
+}
+@media (max-width: 399px) {
+	.container {
+		padding: 20px;
+	}
+	.bottom {
+		// margin-top: 0em;
+		// max-width: 90%;
+		h2 {
+			font-size: 24px;
+		}
+	}
+	.buttons {
+		flex-direction: column;
+		button {
+			margin-right: 0;
+		}
+	}
+	svg {
+		padding-top: 0;
+	}
+}
+
+.wit-microphone {
+    height: 60px!important;
+    width: 60px!important;
+    /*padding: 25px 30px;*/
+}
+
+.wit-microphone.active .mic {
+	color: #e31d28!important;
+	border-color: #e31d28!important;
+}
+
+.wit-microphone .mic {
+	font-size: 40px;
+    line-height: 60px;
+}
+
+.custom-microphone {
+ 	margin-left: 70px;
+    z-index: 50;
+
 }

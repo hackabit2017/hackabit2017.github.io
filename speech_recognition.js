@@ -6,7 +6,7 @@ var error = function (msg) {
   document.getElementById("error").innerHTML = msg;
 };
 mic.onready = function () {
-  info("Microphone is ready to record");
+  info("Ready");
 };
 mic.onaudiostart = function () {
   info("Recording started");
