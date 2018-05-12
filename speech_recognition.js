@@ -20,21 +20,34 @@ mic.onaudioend = function () {
 mic.onresult = function (intent, entities) {
   var r = kv("intent", intent);
 
-  console.log(final_result(intent));
+  // for (var k in entities) {
+  //   var e = entities[k];
+
+  //   if (!(e instanceof Array)) {
+  //     r += kv(k, e.value);
+  //   } else {
+  //     for (var i = 0; i < e.length; i++) {
+  //       r += kv(k, e[i].value);
+  //     }
+  //   }
+  // }
+  var witCommand = '';
 
   for (var k in entities) {
     var e = entities[k];
 
     if (!(e instanceof Array)) {
-      r += kv(k, e.value);
+      witCommand += e.value;
     } else {
       for (var i = 0; i < e.length; i++) {
-        r += kv(k, e[i].value);
+        witCommand += e[i].value;
       }
     }
   }
 
-  document.getElementById("result").innerHTML = r;
+  document.getElementById("result").innerHTML = witCommand;
+
+  var command = getFinalResult(witCommand);
 };
 
 mic.onerror = function (err) {
@@ -58,6 +71,22 @@ function kv (k, v) {
   return k + "=" + v + "\n";
 }
 
-function final_result(intent) {
-  return intent || final_transcript;
+
+function processFinalTranscript(final_transcript) {
+  if(final_transcript.includes('aventura')) {
+    if(final_transcript.includes('unu') || final_transcript.includes('prima')) {
+      return 'aventura1';
+    }
+    else if(final_transcript.includes('doi') || final_transcript.includes('a doua')) {
+      return 'aventura2';
+    }
+    else if(final_transcript.includes('trei') || final_transcript.includes('a treia')) {
+      return 'aventura3';
+    }
+  }
+  return 'exit';
+}
+
+function getFinalResult(witCommand) {
+  return witCommand || processFinalTranscript(final_transcript);
 }
