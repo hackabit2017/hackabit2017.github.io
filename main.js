@@ -1,9 +1,12 @@
 var current_mode = '';
 
 function goToQuest1Screen() {
+  if (current_mode === 'quest1') {
+    return
+  }
   // add video
   current_mode = 'quest1';
-
+  console.log(current_mode);
 }
 
 
