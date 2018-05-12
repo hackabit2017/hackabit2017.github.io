@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="./main.css"></link>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./main.css"></link>
   </head>
   <body>
       <div id="root">
-          <button id="quest1">Quest1 (involves video)</button>
+          <div id='quest_buttons'>
+              <button id="quest1">Quest1 (involves video)</button>
+              <button id="exit" style="display: none;">Exit quest</button>
+          </div>
+          <video autoplay style="display: none;"></video>
       </div>
   </body>
   <script src="./take_photos.js"></script>

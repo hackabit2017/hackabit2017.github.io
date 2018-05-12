@@ -1,14 +1,32 @@
 var current_mode = '';
 
+var quest1_button = document.getElementById('quest1');
+var exit_quest = document.getElementById('exit');
+
 function goToQuest1Screen() {
   if (current_mode === 'quest1') {
     return
   }
-  // add video
   current_mode = 'quest1';
-  console.log(current_mode);
+  if (exit_quest.style.display === "none") {
+    exit_quest.style.display = "block";
+  }
+
+  accessCamera();
 }
-
-
-var quest1_button = document.getElementById('quest1');
 quest1_button.addEventListener('click', goToQuest1Screen);
+
+
+function exitCurrentQuest() {
+  if (current_mode === '') {
+    return
+  }
+  if (exit_quest.style.display !== "none") {
+    exit_quest.style.display = "none";
+  }
+  if (current_mode === 'quest1') {
+    turnOffCamera();
+  }
+  current_mode = '';
+}
+exit_quest.addEventListener('click', exitCurrentQuest);
