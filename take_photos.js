@@ -1,5 +1,7 @@
 'use strict';
 
+var localStream;
+
 function takeSnapshot() {
   var img = document.getElementById('taken_photo');
   if (img.style.display === "none") {
@@ -30,6 +32,7 @@ function accessCamera() {
   if (navigator.mediaDevices) {
     navigator.mediaDevices.getUserMedia({video: true})
       .then(function(stream) {
+        localStream = stream;
         video.src = window.URL.createObjectURL(stream);
         video.addEventListener('click', takeSnapshot);
       })
@@ -41,6 +44,7 @@ function accessCamera() {
 
 function turnOffCamera() {
   var video = document.querySelector('video');
+  localStream.getTracks()[0].stop();
   if (video.style.display !== "none") {
     video.style.display = "none";
   }
