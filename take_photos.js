@@ -4,7 +4,8 @@ function onSuccess(stream) {
   var video = document.getElementById("v");
   var canvas = document.getElementById("c");
   var button = document.getElementById("b");
-  video.src = is_webkit ? window.webkitURL.createObjectURL(stream) : stream;
+  //video.src = is_webkit ? window.webkitURL.createObjectURL(stream) : stream;
+  video.src = stream;
   button.disabled = false;
   button.onclick = function() {
     canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
