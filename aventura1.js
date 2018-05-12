@@ -30,6 +30,7 @@ const aventura1 = {
       this.score += 1;
       this.tries += 1;
       if (this.tries < this.totalTries) {
+        setTimeout(function() {say('aventura1__next_number')}, 2000);
         this.currentNumber = this.getNextNumber();
         domElements.content_aventura.innerHTML += `<div>${this.currentNumber}</div>`
       } else {
