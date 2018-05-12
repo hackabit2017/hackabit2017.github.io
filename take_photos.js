@@ -1,8 +1,11 @@
 'use strict';
 
 function takeSnapshot() {
-  var img = document.querySelector('img#taken_photo') || document.createElement('img');
-  img.id = 'taken_photo';
+  var img = document.getElementById('taken_photo');
+  if (img.style.display === "none") {
+    img.style.display = "block";
+  }
+
   var video = document.querySelector('video');
   var canvas;
   var context;
@@ -17,7 +20,6 @@ function takeSnapshot() {
   context.drawImage(video, 0, 0, width, height);
 
   img.src = canvas.toDataURL('image/png');
-  document.body.appendChild(img);
 }
 
 function accessCamera() {
@@ -42,8 +44,8 @@ function turnOffCamera() {
   if (video.style.display !== "none") {
     video.style.display = "none";
   }
-  var img = document.querySelector('img#taken_photo')
-  if (img !== null && img.style.display !== "none") {
+  var img = document.getElementById('taken_photo')
+  if (img.style.display !== "none") {
     img.style.display = "none";
   }
 }
