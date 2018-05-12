@@ -15,7 +15,13 @@ const commands = {
 // function to play audio files
 const thingsToSay = {
   // should match the audio filename
-  REPEAT: 'repeat'
+  REPEAT: 'repeat',
+  GOOD: 'bravo',
+  HELLO: 'buna',
+  WELCOME: 'hai_sa_incepem',
+  PREVIOUS: 'aventura_precedenta',
+  GAME: 'cu_ce_ne_jucam',
+  FINISH: 'game_successful'
 }
 
 const globals = {
@@ -32,6 +38,7 @@ const domElements = {
 function onCommandReceived(command) {
 
   // if there is a currentQuest running
+  say(thingsToSay.WELCOME);
   if (globals.currentQuest !== null) {
     if (getQuestFromCommand(command)) {
       // the command is a quest, but there is already a quest running
@@ -63,7 +70,10 @@ function onCommandReceived(command) {
 }
 
 function say(thingToSay) {
-  console.log('Saying: ', thingToSay)
+  console.log('Saying: ', thingToSay);
+  var audioFile = './speech/' + thingToSay + '.mp3';
+  var audio = new Audio(audioFile);
+  audio.play();
 }
 
 function getQuestFromCommand(command) {
