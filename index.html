@@ -11,9 +11,10 @@
   <body>
       <div id="root">
           <div id='quest_buttons'>
-            <button id="quest1">Quest1 (involves video)</button>
-            <button id="exit" style="display: none;">Exit quest</button>
+              <button id="aventura1" onclick="onCommandReceived('aventura1')">Aventura 1</button>
+              <button id="aventura2" onclick="onCommandReceived('aventura2')">Aventura 2</button>
           </div>
+          <button id="exit" onclick="onCommandReceived('exit')" style="display: none;">Exit quest</button>
           <button id="text_recognition" style="display: none;">Text recognition</button>
           <video autoplay style="display: none;"></video>
           <img id="taken_photo" style="display: none;">
@@ -36,6 +37,8 @@
   <script type="text/javascript" src="./google_speech_recognition.js"></script>
   <script src="./speech_recognition.js"></script>
   <script src="./main.js"></script>
+  <script src="./aventura1.js"></script>
+    <script src="./aventura2.js"></script>
 <!--   <script type="text/javascript">
      var u = new SpeechSynthesisUtterance();
      u.text = 'Joc';
@@ -45,4 +48,3 @@
      speechSynthesis.speak(u);
   </script> -->
 </html>
- 
