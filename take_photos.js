@@ -22,6 +22,7 @@ function takeSnapshot() {
   context.drawImage(video, 0, 0, width, height);
 
   img.src = canvas.toDataURL('image/png');
+  //uploadImageFromString(img.src);
 }
 
 function accessCamera() {
