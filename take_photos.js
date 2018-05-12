@@ -1,8 +1,10 @@
+var is_webkit = false;
+
 function onSuccess(stream) {
   var video = document.getElementById("v");
   var canvas = document.getElementById("c");
   var button = document.getElementById("b");
-  video.src = stream;
+  video.src = is_webkit ? window.webkitURL.createObjectURL(stream) : stream;
   button.disabled = false;
   button.onclick = function() {
     canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
@@ -16,7 +18,6 @@ function onError(err) {
 }
 
 
-var is_webkit = false;
 if (navigator.getUserMedia) {
     //opera
     navigator.getUserMedia({video: true, audio: false}, onSuccess, onError);
@@ -24,7 +25,7 @@ if (navigator.getUserMedia) {
 else if (navigator.webkitGetUserMedia) {
     //webkit users
     is_webkit = true;
-    navigator.webkitGetUserMedia('video', onSuccess, onError);
+    navigator.webkitGetUserMedia('video, audio', onSuccess, onError);
 }
 else {
     //fallback code goes here
