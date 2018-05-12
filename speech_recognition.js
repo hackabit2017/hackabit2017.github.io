@@ -48,6 +48,7 @@ mic.onresult = function (intent, entities) {
   document.getElementById("result").innerHTML = witCommand;
 
   var command = getFinalResult(witCommand);
+  onCommandReceived(command);
 };
 
 mic.onerror = function (err) {
