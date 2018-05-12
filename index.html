@@ -21,11 +21,26 @@
             <div id="info"></div>
             <div id="error"></div>
           </div>
+          <div id="results">
+            <span id="final_span" class="final"></span>
+            <span id="interim_span" class="interim"></span>
+            <p>
+          </div>
       </div>
   </body>
   <script src="./microphone/microphone.min.js"></script>
   <script src="./take_photos.js"></script>
   <script src="./text_recognition.js"></script>
+  <script type="text/javascript" src="./google_speech_recognition.js"></script>
   <script src="./speech_recognition.js"></script>
   <script src="./main.js"></script>
+<!--   <script type="text/javascript">
+     var u = new SpeechSynthesisUtterance();
+     u.text = 'Joc';
+     u.lang = 'ro-Ro';
+     u.rate = 1;
+     u.onend = function(event) { alert('Finished in ' + event.elapsedTime + ' seconds.'); }
+     speechSynthesis.speak(u);
+  </script> -->
 </html>
+ 

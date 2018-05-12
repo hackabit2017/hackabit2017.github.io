@@ -10,13 +10,17 @@ mic.onready = function () {
 };
 mic.onaudiostart = function () {
   info("Recording started");
+  startButton();
   error("");
 };
 mic.onaudioend = function () {
   info("Recording stopped, processing started");
+  recognition.stop();
 };
 mic.onresult = function (intent, entities) {
   var r = kv("intent", intent);
+
+  console.log(final_result(intent));
 
   for (var k in entities) {
     var e = entities[k];
@@ -32,6 +36,7 @@ mic.onresult = function (intent, entities) {
 
   document.getElementById("result").innerHTML = r;
 };
+
 mic.onerror = function (err) {
   error("Error: " + err);
 };
@@ -51,4 +56,8 @@ function kv (k, v) {
     v = JSON.stringify(v);
   }
   return k + "=" + v + "\n";
+}
+
+function final_result(intent) {
+  return intent || final_transcript;
 }
