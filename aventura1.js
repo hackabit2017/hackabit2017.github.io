@@ -9,7 +9,8 @@ const aventura1 = {
   },
   onLoad: function() {
     console.log('loading aventura1');
-    say('welcome_message__aventura1');
+    say('welcome_message__aventura1')
+    setTimeout(function() {say('aventura1__next_number')}, 6000);
     this.currentNumber = this.getNextNumber();
     domElements.content_aventura.innerHTML = `<div>${this.currentNumber}</div>`;
   },
@@ -25,7 +26,7 @@ const aventura1 = {
     const numberInt = parseInt(command);
     // if correct
     if (numberInt === this.currentNumber) {
-      say('bravo_message');
+      say(thingsToSay.GOOD);
       this.score += 1;
       this.tries += 1;
       if (this.tries < this.totalTries) {
@@ -33,11 +34,11 @@ const aventura1 = {
         domElements.content_aventura.innerHTML += `<div>${this.currentNumber}</div>`
       } else {
         domElements.content_aventura.innerHTML += `<p>SCOR: ${this.score}/${this.totalTries}</p><div>Adventure is over. Returning to main menu</div>`;
-        say('gg');
+        say(thingsToSay.FINISH);
         setTimeout(function(){onCommandReceived('exit')}, 3000)
       }
     } else {
-      say('wrong_answer');
+      say(thingsToSay.WRONG_ANSWER);
       this.tries += 1;
       this.currentNumber = this.getNextNumber();
       domElements.content_aventura.innerHTML += `<div>${this.currentNumber}</div>`

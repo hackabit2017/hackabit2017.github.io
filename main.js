@@ -21,7 +21,11 @@ const thingsToSay = {
   WELCOME: 'hai_sa_incepem',
   PREVIOUS: 'aventura_precedenta',
   GAME: 'cu_ce_ne_jucam',
-  FINISH: 'game_successful'
+  FINISH: 'game_successful',
+  WRONG_ANSWER: 'wrong_answer',
+  WELCOME_MESSAGE_ADVENTURE1: 'welcome_message__aventura1',
+  AVENTURA1__NEXT_NUMBER: 'aventura1__next_number',
+
 }
 
 const globals = {
@@ -36,10 +40,11 @@ const domElements = {
   content_aventura: document.getElementById('content_aventura')
 }
 
+say(thingsToSay.WELCOME);
+
 function onCommandReceived(command) {
 
   // if there is a currentQuest running
-  say(thingsToSay.WELCOME);
   if (globals.currentQuest !== null) {
     if (getQuestFromCommand(command)) {
       // the command is a quest, but there is already a quest running
@@ -74,7 +79,7 @@ function say(thingToSay) {
   console.log('Saying: ', thingToSay);
   var audioFile = './speech/' + thingToSay + '.mp3';
   var audio = new Audio(audioFile);
-  audio.play();
+  return audio.play();
 }
 
 function getQuestFromCommand(command) {
