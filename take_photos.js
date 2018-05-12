@@ -29,6 +29,7 @@ function accessCamera() {
   if (video.style.display === "none") {
     video.style.display = "block";
   }
+
   if (navigator.mediaDevices) {
     navigator.mediaDevices.getUserMedia({video: true})
       .then(function(stream) {

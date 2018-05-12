@@ -13,6 +13,7 @@ function goToQuest1Screen() {
   }
 
   accessCamera();
+  initTextRecognition();
 }
 quest1_button.addEventListener('click', goToQuest1Screen);
 
@@ -26,6 +27,7 @@ function exitCurrentQuest() {
   }
   if (current_mode === 'quest1') {
     turnOffCamera();
+    exitTextRecognition();
   }
   current_mode = '';
 }
