@@ -35,8 +35,8 @@ const globals = {
 
 // DOM elements
 const domElements = {
-  exitButton: document.getElementById('exit'),
-  quest_buttons: document.getElementById('quest_buttons'),
+  // exitButton: document.getElementById('exit'),
+  quest_buttons: document.getElementsByClassName('quest_buttons'),
   content_aventura: document.getElementById('content_aventura')
 }
 
@@ -54,8 +54,8 @@ function onCommandReceived(command) {
     if (command === commands.EXIT) {
       globals.currentQuest.onExit();
       globals.currentQuest = null;
-      domElements.exitButton.style.display = 'none';
-      domElements.quest_buttons.style.display = 'block'
+      // domElements.exitButton.style.display = 'none';
+      Array.from(domElements.quest_buttons).forEach(quest_button => {quest_button.style.display = 'block'})
     } else {
       globals.currentQuest.onCommandReceived(command)
     }
@@ -66,8 +66,10 @@ function onCommandReceived(command) {
       if (isQuestAllowed(newQuest)) {
         globals.currentQuest = newQuest;
         globals.currentQuest.onLoad();
-        domElements.exitButton.style.display = 'block';
-        domElements.quest_buttons.style.display = 'none'
+        // domElements.exitButton.style.display = 'block';
+        // domElements.quest_buttons.style.display = 'none'
+        Array.from(domElements.quest_buttons).forEach(quest_button => {quest_button.style.display = 'none'})
+      } else {
       }
     } else {
       say(thingsToSay.REPEAT)
