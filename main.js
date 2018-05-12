@@ -26,7 +26,8 @@ const globals = {
 // DOM elements
 const domElements = {
   exitButton: document.getElementById('exit'),
-  quest_buttons: document.getElementById('quest_buttons')
+  quest_buttons: document.getElementById('quest_buttons'),
+  content_aventura: document.getElementById('content_aventura')
 }
 
 function onCommandReceived(command) {
@@ -72,6 +73,10 @@ function getQuestFromCommand(command) {
 
 function isQuestAllowed(quest) {
   return true;
+}
+
+function randint(limit) {
+  return Math.floor(Math.random() * (limit+1));
 }
 
 // var current_mode = '';
