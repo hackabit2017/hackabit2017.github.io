@@ -53,4 +53,5 @@ function turnOffCamera() {
   if (img.style.display !== "none") {
     img.style.display = "none";
   }
+  img.removeAttribute('src');
 }

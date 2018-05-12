@@ -16,7 +16,11 @@ function exitTextRecognition() {
 }
 
 function performTextRecognition() {
-  
+  var img = document.getElementById('taken_photo');
+  if (img.src === undefined || img.src === "") {
+    return
+  }
+  //perform text recognition of the image
 }
 text_recognition_button.addEventListener(
   'click', performTextRecognition);
