@@ -3,19 +3,28 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./main.css"></link>
+        <link rel='stylesheet' href='/microphone/microphone.min.css' />
   </head>
   <body>
       <div id="root">
           <div id='quest_buttons'>
-              <button id="quest1">Quest1 (involves video)</button>
-              <button id="exit" style="display: none;">Exit quest</button>
+            <button id="quest1">Quest1 (involves video)</button>
+            <button id="exit" style="display: none;">Exit quest</button>
           </div>
           <button id="text_recognition" style="display: none;">Text recognition</button>
           <video autoplay style="display: none;"></video>
           <img id="taken_photo" style="display: none;">
+          <div>
+            <div id="microphone"></div>
+            <pre id="result"></pre>
+            <div id="info"></div>
+            <div id="error"></div>
+          </div>
       </div>
   </body>
+  <script src="./microphone/microphone.min.js"></script>
   <script src="./take_photos.js"></script>
   <script src="./text_recognition.js"></script>
+  <script src="./speech_recognition.js"></script>
   <script src="./main.js"></script>
 </html>
