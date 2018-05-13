@@ -11,6 +11,7 @@
    top: 0px;
    left: 0px;
    background-color: grey;
+   border: 2px solid black;
 }
 
 #video_content {
@@ -25,6 +26,7 @@
    top: 0px;
    left: 0px;
    background-color: grey;
+   border: 2px solid black;
 }
 
 #taken_photo {
