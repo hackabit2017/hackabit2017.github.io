@@ -19,6 +19,7 @@ const aventura4 = {
   },
   onExit: function() {
     console.log('exiting aventura4');
+    this.tries = 0;
     this.shapeIndex = 0;
     this.currentShape = null;
     domElements.content_aventura.innerHTML = '';
