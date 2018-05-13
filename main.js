@@ -30,7 +30,7 @@ const thingsToSay = {
 
 const globals = {
   currentQuest: null,
-  quests: []
+  quests: {}
 }
 
 // DOM elements
@@ -97,38 +97,3 @@ function isQuestAllowed(quest) {
 function randint(limit) {
   return Math.floor(Math.random() * (limit+1));
 }
-
-// var current_mode = '';
-//
-// var quest1_button = document.getElementById('quest1');
-// var exit_quest = document.getElementById('exit');
-//
-// function goToQuest1Screen() {
-//   if (current_mode === 'quest1') {
-//     return
-//   }
-//   current_mode = 'quest1';
-//   if (exit_quest.style.display === "none") {
-//     exit_quest.style.display = "block";
-//   }
-//
-//   accessCamera();
-//   initTextRecognition();
-// }
-// quest1_button.addEventListener('click', goToQuest1Screen);
-//
-//
-// function exitCurrentQuest() {
-//   if (current_mode === '') {
-//     return
-//   }
-//   if (exit_quest.style.display !== "none") {
-//     exit_quest.style.display = "none";
-//   }
-//   if (current_mode === 'quest1') {
-//     turnOffCamera();
-//     exitTextRecognition();
-//   }
-//   current_mode = '';
-// }
-// exit_quest.addEventListener('click', exitCurrentQuest);

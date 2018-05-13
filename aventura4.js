@@ -18,4 +18,4 @@ const aventura4 = {
   }
 }
 
-globals.quests['aventura2'] = aventura4
+globals.quests['aventura4'] = aventura4
