@@ -9,7 +9,6 @@ const aventura3 = {
   onLoad: function() {
     console.log('loading aventura3');
     say('welcome_message');
-    this.currentOp = show_first_op()
   },
   onExit: function() {
     console.log('exiting aventura3');

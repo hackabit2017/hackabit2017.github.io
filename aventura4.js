@@ -1,4 +1,4 @@
-const aventura2 = {
+const aventura4 = {
   currentOp: null,
   totalOps: 10,
   scor: 0,
@@ -7,15 +7,14 @@ const aventura2 = {
     return 'easy';
   },
   onLoad: function() {
-    console.log('loading aventura2');
+    console.log('loading aventura4');
     say('welcome_message');
-    this.currentOp = show_first_op()
   },
   onExit: function() {
-    console.log('exiting aventura2');
+    console.log('exiting aventura4');
   },
   onCommandReceived: function(command) {
-    console.log('aventura2 a primit commanda', command)
+    console.log('aventura4 a primit commanda', command)
   }
 }
 
