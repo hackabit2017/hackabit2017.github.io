@@ -26,7 +26,15 @@ const aventura2 = {
     domElements.content_aventura.innerHTML = '';
   },
   onCommandReceived: function(command) {
-    console.log('aventura2 a primit commanda', command)
+    console.log('aventura2 a primit commanda', command);
+    if(command === 'poza') {
+      takeSnapshot();
+      say(thingsToSay.GOOD);
+    }
+    else {
+      say(thingsToSay.FINISH);
+      setTimeout(function(){onCommandReceived('exit')}, 3000);
+    }
   }
 }
 
