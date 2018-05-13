@@ -9,10 +9,20 @@ const aventura2 = {
   onLoad: function() {
     console.log('loading aventura2');
     //say('welcome_message');
-    //domElements.content_aventura.innerHTML = '<div><video autoplay></video></div>';
+    domElements.content_aventura.innerHTML = '<div id="content_aventura2">\
+       <div id="video_div">\
+         <video autoplay id="video_content">\
+         </video>\
+       </div>\
+       <div id="img_div">\
+         <img id="taken_photo">\
+       <div>\
+    <div>';
+    accessCamera();
   },
   onExit: function() {
     console.log('exiting aventura2');
+    turnOffCamera();
     domElements.content_aventura.innerHTML = '';
   },
   onCommandReceived: function(command) {
