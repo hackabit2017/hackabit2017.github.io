@@ -4,6 +4,8 @@ const aventura4 = {
   scor: 0,
   shapeIndex: 0,
   currentShape: null,
+  totalTries: 5,
+  tries: 0,
   generate_op: function(type) {
     // const limit = type === 'easy' ? 2 : 10;
     return 'easy';
@@ -23,15 +25,23 @@ const aventura4 = {
   },
   onCommandReceived: function(command) {
     console.log('aventura4 a primit commanda', command)
-    if(this.currentShape == command){
-      say(thingsToSay.GOOD);
-      this.score += 1;
-      this.tries += 1;
-      this.shapeIndex++;
-      container = domElements.content_aventura;
-      render_3d(container, templates[this.shapeIndex].template)
-      this.currentShape = templates[this.shapeIndex].value
-    } 
+    if(this.shapeIndex < 3){
+      if(this.currentShape == command){
+        say(thingsToSay.GOOD);
+        this.score += 1;
+        this.tries += 1;
+        this.shapeIndex++;
+        container = domElements.content_aventura;
+        render_3d(container, templates[this.shapeIndex].template)
+        this.currentShape = templates[this.shapeIndex].value
+      } else {
+        say(thingsToSay.WRONG_ANSWER);
+        this.tries += 1;
+      }
+    }else{
+      say(thingsToSay.FINISH);
+      setTimeout(function(){onCommandReceived('exit')}, 3000)
+    }
   }
 }
 
