@@ -8,13 +8,12 @@ var config = {
 };
 firebase.initializeApp(config);
 
-var database = firebase.database();
-
+var photosRef = firebase.storage().ref('/photos');
 
 function uploadImageFromString(str_value) {
-  var storageRef = database.ref();
-  var photoRef = storageRef.child('photo.jpg');
-  photoRef.putString(str_value, 'data_url').then(function(snapshot) {
-    console.log('Uploaded a data_url string!');
-  });
+  var photoRef = photosRef.child('photo.jpg');
+  photoRef.putString(str_value, 'data_url').then(
+    function(snapshot) {
+      console.log('Uploaded a data_url string!');
+    });
 }
