@@ -80,7 +80,6 @@ body{
 	bottom: 320px;
 	right: 310px;
 	overflow:hidden;
-	color:#009fA7;
 
 }
 
@@ -145,11 +144,12 @@ body{
 
 .first-part {
 	width: 200px;
-	border-radius: 50px;
 	height: 60px;
+	border-radius: 50px;
 	position: relative;
 	z-index: 20;
 }
+
 
 .second-part {
 	width: 80px;
@@ -170,6 +170,7 @@ body{
 	left: 70px;
 	z-index: 20;
 }
+
 
 .bush {
 	position: fixed;
@@ -300,7 +301,7 @@ body{
 	border-left: 150px solid transparent;
 	border-right: 150px solid transparent;
 	border-bottom: 300px solid #4D7732;
-	bottom: 180px;
+	bottom: 175px;
 	left: -130px;
 	z-index: 999;
 
@@ -327,6 +328,15 @@ body{
 	text-indent: 10px;
 	color: #16323E;
 }
+
+.aventura-trei{
+	font-size: 40px;
+	font-family: 'Indie Flower', cursive;
+	text-align: center;
+	text-indent: 10px;
+	color: #B0E2F3;
+}
+{}
 
 
 .face-container{
@@ -425,6 +435,23 @@ svg {
 	font-weight: 900;
 }
 .round-tree:hover {
+	font-weight: 900;
+}
+.oval-tree:hover {
+	font-weight: 900;
+}
+#aventura4 {
+	font-size: 40px;
+	font-family: 'Indie Flower', cursive;
+	text-align: center;
+	color: #FFF;
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	right: 500px;
+	bottom: 420px;
+}
+.big:hover {
 	font-weight: 900;
 }
 
