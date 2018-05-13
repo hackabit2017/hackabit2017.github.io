@@ -11,7 +11,8 @@ firebase.initializeApp(config);
 var photosRef = firebase.storage().ref('/photos');
 
 function uploadImageFromString(str_value) {
-  var photoRef = photosRef.child('photo.jpg');
+  var timestamp = Math.round((new Date()).getTime() / 1000);
+  var photoRef = photosRef.child('photo_'+timestamp+'.jpg');
   photoRef.putString(str_value, 'data_url').then(
     function(snapshot) {
       console.log('Uploaded a data_url string!');
