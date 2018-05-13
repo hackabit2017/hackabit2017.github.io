@@ -21,23 +21,23 @@ body{
 }
 .mountain {
 	width: 0;
-  	height: 0;
+	height: 0;
 	position: absolute;
 	bottom: 0;
 }
 
 .big {
 	border-left: 400px solid transparent;
-  	border-right: 400px solid transparent;
-  	border-bottom: 700px solid #16323E;
+	border-right: 400px solid transparent;
+	border-bottom: 700px solid #16323E;
 	right: 200px;
 }
 
 .small {
 	border-left: 300px solid transparent;
-  	border-right: 300px solid transparent;
-  	border-bottom: 500px solid #4D7732;
-    left: 600px;
+	border-right: 300px solid transparent;
+	border-bottom: 500px solid #4D7732;
+	left: 600px;
 }
 
 .ground {
@@ -49,11 +49,11 @@ body{
 
 .first-round-mountain {
 	background: #7BB140;
- 	height:400px;
-  	width: 600px;
-  	border-top-left-radius: 300px;
-  	border-top-right-radius: 300px;
-  	position: absolute;
+	height:400px;
+	width: 600px;
+	border-top-left-radius: 300px;
+	border-top-right-radius: 300px;
+	position: absolute;
 	bottom: 0;
 	right: 0;
 }
@@ -67,19 +67,20 @@ body{
 	background: #007850;
 	position: absolute;
 	transform:rotate(-45deg);
-  	bottom: 260px;
+	bottom: 260px;
 	right: 60px;
 }
 
 .oval-tree {
 	background: #00A898;
- 	height:360px;
-  	width: 160px;
-  	border-radius: 50%;
-  	position: absolute;
-  	bottom: 320px;
-	right: 360px;
+	height:360px;
+	width: 260px;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 320px;
+	right: 310px;
 	overflow:hidden;
+	color:#009fA7;
 
 }
 
@@ -132,10 +133,10 @@ body{
 }
 
 .cloud {
-    position: fixed;
-    top: 200px;
-    z-index: 999;
-    left: 370px;
+	position: fixed;
+	top: 200px;
+	z-index: 999;
+	left: 370px;
 }
 
 .cloud-background {
@@ -143,31 +144,31 @@ body{
 }
 
 .first-part {
-    width: 200px;
-    border-radius: 50px;
-    height: 60px;
-    position: relative;
-    z-index: 20;
+	width: 200px;
+	border-radius: 50px;
+	height: 60px;
+	position: relative;
+	z-index: 20;
 }
 
 .second-part {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    position: relative;
-    bottom: 90px;
-    left: 20px;
-    z-index: 20;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: relative;
+	bottom: 90px;
+	left: 20px;
+	z-index: 20;
 }
 
 .third-part {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: relative;
-    bottom: 200px;
-    left: 70px;
-    z-index: 20;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: relative;
+	bottom: 200px;
+	left: 70px;
+	z-index: 20;
 }
 
 .bush {
@@ -180,8 +181,8 @@ body{
 .first-part-bush{
 	background-color: #a1c149;
 	width: 200px;
-   	border-radius: 50px;
- 	height: 80px;
+	border-radius: 50px;
+	height: 80px;
 	position: relative;
 
 }
@@ -190,20 +191,20 @@ body{
 	background-color: #a1c149;
 	width: 80px;
 	height: 80px;
-   	border-radius: 50%;
+	border-radius: 50%;
 	position: relative;
- 	bottom: 120px;
- 	left: 90px;
+	bottom: 120px;
+	left: 90px;
 }
 
 .third-part-bush{
 	background-color: #a1c149;
 	width: 70px;
 	height: 70px;
-   	border-radius: 50%;
+	border-radius: 50%;
 	position: relative;
-    bottom: 180px;
- 	left: 40px;
+	bottom: 180px;
+	left: 40px;
 }
 
 .second-bush {
@@ -214,12 +215,12 @@ body{
 	bottom:-50px;
 }
 @keyframes spin {
-  from {
-    transform: rotateZ(-180deg);
-  }
-  to {
-    transform: rotateZ(0deg);
-  }
+	from {
+		transform: rotateZ(-180deg);
+	}
+	to {
+		transform: rotateZ(0deg);
+	}
 }
 .rainbow {
 	clip: rect(0 420px 210px 0);
@@ -227,7 +228,7 @@ body{
 	position: absolute;
 	top: 360px;
 	width: 420px;
- 	left: -415px;
+	left: -415px;
 }
 .arc {
 	animation: spin ease-in-out 0.5s normal both;
@@ -297,11 +298,11 @@ body{
 
 #sm {
 	border-left: 150px solid transparent;
-  	border-right: 150px solid transparent;
-  	border-bottom: 300px solid #4D7732;
+	border-right: 150px solid transparent;
+	border-bottom: 300px solid #4D7732;
 	bottom: 180px;
- 	left: -130px;
- 	z-index: 999;
+	left: -130px;
+	z-index: 999;
 
 
 }
@@ -330,8 +331,8 @@ body{
 
 .face-container{
 	z-index: 50;
-    position: absolute;
-    top: -25px;
+	position: absolute;
+	top: -25px;
 	width: 100%;
 	height: 100%;
 }
@@ -355,9 +356,9 @@ svg {
 	.container {
 		width: 90%;
 	}
-		.bottom {
+	.bottom {
 		margin-top: 1em;
-			max-width:90%;
+		max-width:90%;
 	}
 }
 @media (max-width: 399px) {
@@ -365,27 +366,27 @@ svg {
 		padding: 20px;
 	}
 	.bottom {
-		// margin-top: 0em;
-		// max-width: 90%;
-		h2 {
-			font-size: 24px;
-		}
+	// margin-top: 0em;
+	// max-width: 90%;
+	h2 {
+		font-size: 24px;
 	}
-	.buttons {
-		flex-direction: column;
-		button {
-			margin-right: 0;
-		}
-	}
-	svg {
-		padding-top: 0;
-	}
+}
+.buttons {
+	flex-direction: column;
+button {
+	margin-right: 0;
+}
+}
+svg {
+	padding-top: 0;
+}
 }
 
 .wit-microphone {
-    height: 60px!important;
-    width: 60px!important;
-    /*padding: 25px 30px;*/
+	height: 60px!important;
+	width: 60px!important;
+	/*padding: 25px 30px;*/
 }
 
 .wit-microphone.active .mic {
@@ -395,12 +396,12 @@ svg {
 
 .wit-microphone .mic {
 	font-size: 40px;
-    line-height: 60px;
+	line-height: 60px;
 }
 
 .custom-microphone {
- 	margin-left: 70px;
-    z-index: 50;
+	margin-left: 70px;
+	z-index: 50;
 
 }
 
@@ -418,4 +419,11 @@ svg {
 	text-align: center;
 	padding-bottom: 30px;
 	font-family: 'Indie Flower', cursive;
+}
+
+.teardrop-tree:hover {
+	font-weight: 900;
+}
+.round-tree:hover {
+	font-weight: 900;
 }
