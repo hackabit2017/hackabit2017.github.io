@@ -25,7 +25,7 @@ const aventura4 = {
   },
   onCommandReceived: function(command) {
     console.log('aventura4 a primit commanda', command)
-    if(this.shapeIndex < 3){
+    if(this.shapeIndex < 2 && this.tries < this.totalTries){
       if(this.currentShape == command){
         say(thingsToSay.GOOD);
         this.score += 1;
