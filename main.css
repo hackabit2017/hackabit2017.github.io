@@ -20,23 +20,23 @@ body{
 	left:200px;
 }
 .mountain {
-	width: 0; 
-  	height: 0; 
+	width: 0;
+  	height: 0;
 	position: absolute;
 	bottom: 0;
-}	
+}
 
 .big {
-	border-left: 400px solid transparent; 
-  	border-right: 400px solid transparent; 
-  	border-bottom: 700px solid #16323E; 
+	border-left: 400px solid transparent;
+  	border-right: 400px solid transparent;
+  	border-bottom: 700px solid #16323E;
 	right: 200px;
 }
 
 .small {
-	border-left: 300px solid transparent; 
-  	border-right: 300px solid transparent; 
-  	border-bottom: 500px solid #4D7732; 
+	border-left: 300px solid transparent;
+  	border-right: 300px solid transparent;
+  	border-bottom: 500px solid #4D7732;
     left: 600px;
 }
 
@@ -173,8 +173,8 @@ body{
 .bush {
 	position: fixed;
 	bottom:0;
-	z-index:999;   
-	left:440px; 
+	z-index:999;
+	left:440px;
 }
 
 .first-part-bush{
@@ -183,7 +183,7 @@ body{
    	border-radius: 50px;
  	height: 80px;
 	position: relative;
-   
+
 }
 
 .second-part-bush{
@@ -192,8 +192,8 @@ body{
 	height: 80px;
    	border-radius: 50%;
 	position: relative;
- 	bottom: 120px; 
- 	left: 90px;  
+ 	bottom: 120px;
+ 	left: 90px;
 }
 
 .third-part-bush{
@@ -202,16 +202,16 @@ body{
 	height: 70px;
    	border-radius: 50%;
 	position: relative;
-    bottom: 180px; 
- 	left: 40px; 
+    bottom: 180px;
+ 	left: 40px;
 }
 
 .second-bush {
 	position: fixed;
 	bottom: 20px;
-	z-index:999;   
-	left:1100px; 
-	bottom:-50px; 
+	z-index:999;
+	left:1100px;
+	bottom:-50px;
 }
 @keyframes spin {
   from {
@@ -226,7 +226,7 @@ body{
 	height: 420px;
 	position: absolute;
 	top: 360px;
-	width: 420px; 
+	width: 420px;
  	left: -415px;
 }
 .arc {
@@ -296,11 +296,11 @@ body{
 }
 
 #sm {
-	border-left: 150px solid transparent; 
-  	border-right: 150px solid transparent; 
-  	border-bottom: 300px solid #4D7732; 
-	bottom: 180px; 
- 	left: -130px; 
+	border-left: 150px solid transparent;
+  	border-right: 150px solid transparent;
+  	border-bottom: 300px solid #4D7732;
+	bottom: 180px;
+ 	left: -130px;
  	z-index: 999;
 
 
@@ -402,4 +402,20 @@ svg {
  	margin-left: 70px;
     z-index: 50;
 
+}
+
+#content_aventura {
+	position: relative;
+	width: 1150px;
+	height: 850px;
+	border-radius: 15%;
+	background-color: white;
+	z-index: 1000;
+	bottom: 700px;
+	right: -650px;
+	font-size: 700px;
+	font-weight: 700;
+	text-align: center;
+	padding-bottom: 30px;
+	font-family: 'Indie Flower', cursive;
 }

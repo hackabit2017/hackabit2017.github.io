@@ -32,9 +32,9 @@ const aventura1 = {
       if (this.tries < this.totalTries) {
         setTimeout(function() {say('aventura1__next_number')}, 2000);
         this.currentNumber = this.getNextNumber();
-        domElements.content_aventura.innerHTML += `<div>${this.currentNumber}</div>`
+        domElements.content_aventura.innerHTML = `<div>${this.currentNumber}</div>`
       } else {
-        domElements.content_aventura.innerHTML += `<p>SCOR: ${this.score}/${this.totalTries}</p><div>Adventure is over. Returning to main menu</div>`;
+        domElements.content_aventura.innerHTML = `<p>SCOR: ${this.score}/${this.totalTries}</p><div>Adventure is over. Returning to main menu</div>`;
         say(thingsToSay.FINISH);
         setTimeout(function(){onCommandReceived('exit')}, 3000)
       }

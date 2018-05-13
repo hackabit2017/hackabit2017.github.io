@@ -56,6 +56,7 @@ function onCommandReceived(command) {
       globals.currentQuest = null;
       // domElements.exitButton.style.display = 'none';
       Array.from(domElements.quest_buttons).forEach(quest_button => {quest_button.style.display = 'block'})
+      domElements.content_aventura.style.display = 'none'
     } else {
       globals.currentQuest.onCommandReceived(command)
     }
@@ -69,6 +70,7 @@ function onCommandReceived(command) {
         // domElements.exitButton.style.display = 'block';
         // domElements.quest_buttons.style.display = 'none'
         Array.from(domElements.quest_buttons).forEach(quest_button => {quest_button.style.display = 'none'})
+        domElements.content_aventura.style.display = 'block'
       } else {
       }
     } else {
