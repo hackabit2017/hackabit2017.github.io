@@ -9,10 +9,11 @@ const aventura2 = {
   onLoad: function() {
     console.log('loading aventura2');
     //say('welcome_message');
+    //domElements.content_aventura.innerHTML = '<div><video autoplay></video></div>';
   },
   onExit: function() {
     console.log('exiting aventura2');
-    domElements.content_aventura.innerHTML = '<div><video autoplay></video></div>';
+    domElements.content_aventura.innerHTML = '';
   },
   onCommandReceived: function(command) {
     console.log('aventura2 a primit commanda', command)
