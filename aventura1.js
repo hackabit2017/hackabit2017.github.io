@@ -35,7 +35,8 @@ const aventura1 = {
       if (this.tries < this.totalTries) {
         setTimeout(function() {say('aventura1__next_number')}, 2000);
         this.currentNumber = this.getNextNumber();
-        domElements.content_aventura.innerHTML = `<div>${this.currentNumber}</div>`
+        const color = this.colors[randint(4)]
+        domElements.content_aventura.innerHTML = `<div style="color: ${color}">${this.currentNumber}</div>`;
       } else {
         domElements.content_aventura.innerHTML = `<p class="scor">SCOR: ${this.score}/${this.totalTries}</p>`;
         say(thingsToSay.FINISH);
