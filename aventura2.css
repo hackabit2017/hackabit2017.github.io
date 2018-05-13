@@ -1,0 +1,36 @@
+#content_aventura2 {
+    display: inline-flex;
+    position: relative;
+    top: -100px;
+}
+
+#video_div {
+   display: inline-flex;
+   position: relative;
+   top: 0px;
+   left: 0px;
+   height: 300px;
+   width 300px;
+   background-color: grey;
+}
+
+#video_content {
+    height: 300px;
+    width 300px;
+}
+
+
+#img_div {
+   display: inline-flex;
+   position: relative;
+   top: 0px;
+   left: 0px;
+   height: 300px;
+   width 300px;
+   background-color: grey;
+}
+
+#taken_photo {
+    height: 300px;
+    width: 300px;
+}
