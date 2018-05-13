@@ -2,6 +2,7 @@ const aventura4 = {
   currentOp: null,
   totalOps: 10,
   scor: 0,
+  shapeIndex: 0,
   currentShape: null,
   generate_op: function(type) {
     // const limit = type === 'easy' ? 2 : 10;
@@ -11,17 +12,24 @@ const aventura4 = {
     console.log('loading aventura4');
     // say('welcome_message');
     container = domElements.content_aventura;
-    render_3d(container, templates[0])
-    this.currentShape = 'cube'
+    render_3d(container, templates[this.shapeIndex])
+    this.currentShape = 'patrat'
   },
   onExit: function() {
     console.log('exiting aventura4');
+    this.shapeIndex = 0;
+    this.currentShape = null;
     domElements.content_aventura.innerHTML = '';
   },
   onCommandReceived: function(command) {
     console.log('aventura4 a primit commanda', command)
-    if(this.currentShape == 'cube'){
-      console.log(command)
+    if(this.currentShape == command){
+      say(thingsToSay.GOOD);
+      this.score += 1;
+      this.tries += 1;
+      this.shapeIndex++;
+      container = domElements.content_aventura;
+      render_3d(container, templates[this.shapeIndex])
     } 
   }
 }
