@@ -427,3 +427,8 @@ svg {
 .round-tree:hover {
 	font-weight: 900;
 }
+
+.scor {
+	font-size: 100px;
+	font-weight: 100;
+}
